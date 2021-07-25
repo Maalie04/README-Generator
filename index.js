@@ -82,9 +82,9 @@ const writeToFile = (filename, data) => {
 
 const init = () => {
     promptUser()
-        .then(function (data) {
-            writeToFile('readMe.md', generateMarkDown(data));
-        })
+        .then((data) => 
+            writeToFile('myReadMe.md', generateMarkDown(data), (err) => 
+            err ? console.error(err) : console.log('Readme file was successfully created!!')));       
 };
 
 
