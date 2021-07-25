@@ -1,8 +1,11 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const utiil = require('util')
+const util = require('util');
 
-inquirer.prompt([
+const writeFileAsync = util.promisify(fs.writeFile);
+
+const promptUser = () => { 
+return inquirer.prompt([
     {
     type: "input",
     name: "Description",
@@ -54,7 +57,19 @@ inquirer.prompt([
     name: "Email",
     message: "What is your Email?"
 },
-
 ]) .then(function(answers){
     console.log(answers.Welcome)
 })
+};
+
+const writeToFile = (filename, data) => {
+    
+};
+
+const init = () => {
+    promptUser()
+    .then(())
+};
+
+
+
