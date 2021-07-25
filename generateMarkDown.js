@@ -1,12 +1,12 @@
-const renderLiscenseBadge = (liscence) => {
+const renderLicenseBadge = (licence) => {
 
 };
 
-const renderLiscenseLink = (liscence) => {
+const renderLicenseLink = (licence) => {
 
 };
 
-const renderLiscenseSection = (liscence) => {
+const renderLicenseSection = (licence) => {
 
 };
 

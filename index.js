@@ -43,9 +43,10 @@ return inquirer.prompt([
 },
 {
     type: "list",
-    name: "Liscence",
-    message: "Choose...",
-    choices: ['him','me'],
+    name: "Licence",
+    message: "What license did you choose?",
+    choices: ['Apache','MIT License', 'Mozilla Public Liscense' ],
+    validate: (value) => {if(value){return true}else{return 'Please choose a license!!'}}
 },
 {
     type: "input",
