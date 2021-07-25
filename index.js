@@ -12,9 +12,9 @@ return inquirer.prompt([
     message: "Tell us about the application"
 },
 {
-    type: "input",
+    type: "list",
     name: "table of contents",
-    list: ""
+    message: ""
 },
 {
     type: "input",
@@ -37,11 +37,6 @@ return inquirer.prompt([
     message: ""
 },
 {
-    type: "input",
-    name: "Questions",
-    message: ""
-},
-{
     type: "list",
     name: "Licence",
     message: "What license did you choose?",
@@ -55,11 +50,16 @@ return inquirer.prompt([
 },
 {
     type: "input",
+    name: "Linkedin",
+    message: "Enter Linkedin..."
+},
+{
+    type: "input",
     name: "Email",
     message: "What is your Email?"
 },
 ]) .then(function(answers){
-    console.log(answers.Welcome)
+    
 })
 };
 
