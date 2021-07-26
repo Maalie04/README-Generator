@@ -13,18 +13,21 @@ const renderLicenseSection = (licence) => {
 };
 
 const generateMarkDown = (data) => {
-    return `# Title: ${data.title}
+    return `# Title: ${data.Title}
 
-         ##   Installation: ${data.installation}
-         ##   Usage: ${data.usage}
-         ##   Contribution: ${data.contribution}
-         ##   Credits: ${data.credits}
-         ##   License: ${data.licence}
+##   Installation: 
+${data.Installation}
+##   Usage: 
+${data.Usage}
+##   Contribution: 
+${data.Contributions}
+##   License: 
+${data.Licence}
 
    ## Contact
-    * Github  :${data.github}
-    * Linkedin:${data.linkedin}        
-    * E-mail  :${data.Email}`
+    * Github  : ${data.Github}
+    * Linkedin: ${data.Linkedin}        
+    * E-mail  : ${data.Email}`
 };
 
 module.exports = generateMarkDown;
