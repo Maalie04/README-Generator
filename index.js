@@ -19,9 +19,9 @@ const promptUser = () => {
             message: "Tell us about the application"
         },
         {
-            type: "list",
+            type: "input",
             name: "table of contents",
-            message: ""
+            message: "Table of contents?"
         },
         {
             type: "input",
@@ -65,27 +65,30 @@ const promptUser = () => {
             name: "Email",
             message: "What is your Email?"
         },
-    ]).then(function (answers) {
+     ])//.then((data) => {
 
-    })
-};
+    //     writeToFile = (filename, data) => {
 
-const writeToFile = (filename, data) => {
+    //         `${data.Title.toLowerCase().split(' ').join('')}.json`;
 
-    const filename = `${data.Title.toLowerCase().split(' ').join('')}.json`;
-    fs.writeFile("./assets" + filename, data, function (err) {
-        if (err) {
-            console.log(err)
-        }
-    })
+    //         fs.writeFile("./assets" + filename, data, function (err) {
+    //             if (err) {
+    //                 console.log(err)
+    //             }
+    //         })
+    //     };
+
+    // })
+
 };
 
 const init = () => {
     promptUser()
-        .then((data) => 
-            writeToFile('myReadMe.md', generateMarkDown(data), (err) => 
-            err ? console.error(err) : console.log('Readme file was successfully created!!')));       
+        .then((data) =>
+            fs.writeFile('myReadMe.md', generateMarkDown(data), (err) =>
+                err ? console.error(err) : console.log('Readme file was successfully created!!')));
 };
 
 
 
+init();
