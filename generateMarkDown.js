@@ -1,8 +1,10 @@
+var badge;
+
 const renderLicenseBadge = (licence) => {
 
 };
 
-const renderLicenseLink = (licence) => {
+const renderLicenseLink = (licence) => {`           `
 
 };
 
@@ -11,15 +13,15 @@ const renderLicenseSection = (licence) => {
 };
 
 const generateMarkDown = (data) => {
-    return `# ${data.title}
+    return `# Title: ${data.title}
 
-              ${data.installation}
-              ${data.usage}
-              ${data.contribution}
-              ${data.credits}
-              ${data.licence}
+         ##   Installation: ${data.installation}
+         ##   Usage: ${data.usage}
+         ##   Contribution: ${data.contribution}
+         ##   Credits: ${data.credits}
+         ##   License: ${data.licence}
 
-    # Contact
+   ## Contact
     * Github  :${data.github}
     * Linkedin:${data.linkedin}        
     * E-mail  :${data.Email}`
