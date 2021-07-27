@@ -19,9 +19,9 @@ const promptUser = () => {
             message: "Tell us about the application"
         },
         {
-            type: "input",
+            type: "confirm",
             name: "table of contents",
-            message: "Table of contents?"
+            default: "Table of contents?"
         },
         {
             type: "input",
@@ -34,9 +34,9 @@ const promptUser = () => {
             message: "Provide instructions for the app"
         },
         {
-            type: "input",
+            type: "confirm",
             name: "Contributions",
-            message: "Who are the contribitors?"
+            default: "Was there any contribitors?"
         },
         {
             type: "input",

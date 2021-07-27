@@ -1,7 +1,5 @@
 
-//     [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 
-// };
 
 const renderLicenseLink = (license) => {
 
@@ -20,9 +18,6 @@ const renderLicenseLink = (license) => {
 
 };
 
-const renderLicenseSection = (license) => {
-
-};
 
 const generateMarkDown = (data) => {
 return `
@@ -40,11 +35,14 @@ ${renderLicenseLink(data.license)}
 
 ## Installation: 
 ${data.Installation}
+## Description:
+${data.Description}
 ## Usage: 
 ${data.Usage}
 ## Contribution: 
 ${data.Contributions}
 ## License: 
+![License: ${data.license}](https://img.shields.io/badge/License-${data.license}-blue.svg)
 
 ## Contact
     * Github  : ${data.Github}
