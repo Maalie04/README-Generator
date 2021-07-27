@@ -41,13 +41,13 @@ const promptUser = () => {
         {
             type: "input",
             name: "Test",
-            message: ""
+            message: "Do you have any test?"
         },
         {
             type: "list",
             name: "Licence",
             message: "What license did you choose?",
-            choices: ['Apache', 'MIT License', 'Mozilla Public Liscense'],
+            choices: ['Apache-2.0', 'MIT License', 'Mozilla Public Liscense'],
             validate: (value) => { if (value) { return true } else { return 'Please choose a license!!' } }
         },
         {
