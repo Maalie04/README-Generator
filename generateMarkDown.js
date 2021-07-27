@@ -1,62 +1,54 @@
-var badge;
 
-const renderLicenseBadge = (licence) => {
+//     [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 
-    if(licence === 'Apache-2.0'){
-return https://img.shields.io/badge/License-Apache%202.0-blue.svg;
-    }
+// };
 
-    if( licence === 'MIT License'){
-return (https://img.shields.io/badge/License-MIT-yellow.svg);
-    }
+const renderLicenseLink = (license) => {
 
-    if(licence === 'Mozilla Public Liscense'){
-return (https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg);
-    }
-    [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-
-    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-    [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
-
-};
-
-const renderLicenseLink = (licence) => {
-
-    if(licence === 'Apache-2.0'){
-        return (https://opensource.org/licenses/Apache-2.0)
+    if (license === 'Apache%202.0') {
+        return ("https://opensource.org/licenses/Apache-2.0")
 
     }
 
-    if( licence === 'MIT License'){
-
+    if (license === 'MIT%20License') {
+        return ("https://opensource.org/licenses/MIT")
     }
 
-    if(licence === 'Mozilla Public Liscense'){
-
+    if (license === 'Mozilla%20Public%20Liscense') {
+        return ("https://opensource.org/licenses/MPL-2.0")
     }
 
 };
 
-const renderLicenseSection = (licence) => {
+const renderLicenseSection = (license) => {
 
 };
 
 const generateMarkDown = (data) => {
-    return `# Title: ${data.Title}
+return `
+# Title: 
+${data.Title}
+![License: ${data.license}](https://img.shields.io/badge/License-${data.license}-blue.svg)
 
-##   Installation: 
+${renderLicenseLink(data.license)}
+
+# Table of Contents 
+* [description](#description)
+* [installation](#installation)
+* [usage](#usage)
+* [contribution](#contribution)
+
+## Installation: 
 ${data.Installation}
-##   Usage: 
+## Usage: 
 ${data.Usage}
-##   Contribution: 
+## Contribution: 
 ${data.Contributions}
-##   License: 
-${data.Licence}
+## License: 
 
-   ## Contact
+## Contact
     * Github  : ${data.Github}
-    * Linkedin: ${data.Linkedin}        
+    * Linkedin: ${data.Linkedin}       
     * E-mail  : ${data.Email}`
 };
 

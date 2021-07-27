@@ -1,10 +1,10 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-const generateMarkDown = require('./generateMarkDown');
+ const generateMarkDown = require('./generateMarkDown');
 
 
-const writeFileAsync = util.promisify(fs.writeFile);
+// const writeFileAsync = util.promisify(fs.writeFile);
 
 const promptUser = () => {
     return inquirer.prompt([
@@ -41,14 +41,15 @@ const promptUser = () => {
         {
             type: "input",
             name: "Test",
-            message: "Do you have any test?"
+            message: "What is the command to run test?"
         },
         {
             type: "list",
-            name: "Licence",
+            name: "license",
             message: "What license did you choose?",
-            choices: ['Apache-2.0', 'MIT License', 'Mozilla Public Liscense'],
-            validate: (value) => { if (value) { return true } else { return 'Please choose a license!!' } }
+            choices: [
+                { name: 'Apache 2.0', value: "Apache%202.0" }, { name: 'MIT License', value: "MIT" }, { name: 'Mozilla Public License', value: "MPL" }],
+
         },
         {
             type: "input",
@@ -65,27 +66,14 @@ const promptUser = () => {
             name: "Email",
             message: "What is your Email?"
         },
-     ])//.then((data) => {
-
-    //     writeToFile = (filename, data) => {
-
-    //         `${data.Title.toLowerCase().split(' ').join('')}.json`;
-
-    //         fs.writeFile("./assets" + filename, data, function (err) {
-    //             if (err) {
-    //                 console.log(err)
-    //             }
-    //         })
-    //     };
-
-    // })
+    ])
 
 };
 
 const init = () => {
     promptUser()
         .then((data) =>
-            fs.writeFile('myReadMe.md', generateMarkDown(data), (err) =>
+            fs.writeFile('README.md', generateMarkDown(data), (err) =>
                 err ? console.error(err) : console.log('Readme file was successfully created!!')));
 };
 
