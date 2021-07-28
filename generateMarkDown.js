@@ -22,8 +22,8 @@ const renderLicenseLink = (license) => {
 const generateMarkDown = (data) => {
 return `
 
-# Title: 
-${data.Title}
+# Title: ${data.Title}
+
 ![License: ${data.license}](https://img.shields.io/badge/License-${data.license}-blue.svg)
 
 ${renderLicenseLink(data.license)}
