@@ -1,6 +1,6 @@
 
 
-
+// this function will return the links to the license the user puts in
 const renderLicenseLink = (license) => {
 
     if (license === 'Apache%202.0') {
@@ -18,9 +18,10 @@ const renderLicenseLink = (license) => {
 
 };
 
-
+// this function will generate mark down text dynamically as the data comes in
 const generateMarkDown = (data) => {
 return `
+
 # Title: 
 ${data.Title}
 ![License: ${data.license}](https://img.shields.io/badge/License-${data.license}-blue.svg)
