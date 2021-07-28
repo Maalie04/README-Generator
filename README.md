@@ -13,11 +13,11 @@ https://opensource.org/licenses/Apache-2.0
 * [contribution](#contribution)
 
 ## Installation: 
-Install node. Clone the repo. Install npm packages
+Install node, clone the repo, Install npm packages
 ## Description:
 Creating a readme file through node. The purpose is to develope a detailed readme file. This allows a user to generate a readme file dynamically.
 ## Usage: 
-Node index. Answer the prompt questions. A readme file will be generated.
+Through the integrated command line, type node index. Answer the prompt questions. A readme file will be generated.
 ## Contribution: 
 false
 ## License: 
