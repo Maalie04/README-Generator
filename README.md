@@ -1,9 +1,5 @@
 # README-Generator
 
-C:\Users\maali\OneDrive\Desktop\readme1.png
-C:\Users\maali\OneDrive\Desktop\readme (2).png
-C:\Users\maali\OneDrive\Desktop\readme3.png
-
 ## Description
 * This application will generate a readme file upon anwering prompt questions
 * The prompt will ask for the title, description, usage, installation, usage, contributions, liscense, and for the users github, linkedin, and email account
